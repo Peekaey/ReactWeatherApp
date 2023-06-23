@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
-
+import { motion } from "framer-motion";
 export class Sydney extends Component {
     static displayName = Sydney.name;
 
     render() {
         return (
-            <div>
-                <h1>Welcome to Sydney Weather!</h1>
+            <div className='background'>
+
+                <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 1.1 }}
+                    drag="x"
+                    dragConstraints={{ left: -100, right: 100 }}
+                    >
+                    <h1>Welcome to Sydney Weather!</h1>
+                </motion.div>
+                
+                
                 <p>Welcome to your new single-page application, built with:</p>
                 <ul>
                     <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
